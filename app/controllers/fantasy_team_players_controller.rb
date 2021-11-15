@@ -1,0 +1,2 @@
+class FantasyTeamPlayersController < ApplicationController
+end
