@@ -1,0 +1,10 @@
+<div style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px">
+  <h3>Teams</h3>
+  <table>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><p><%= team.name %></p></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
