@@ -16,10 +16,13 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import { clickListener, remainingBudget } from 'components/playerSelection.js';
+import { playersConstraint, constructorsConstraint, budgetConstraint, displayTeamSave } from 'components/teamConditions.js'
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
   clickListener();
   remainingBudget();
-
+  playersConstraint();
+  constructorsConstraint();
+  budgetConstraint();
+  displayTeamSave();
 });

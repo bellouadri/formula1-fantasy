@@ -1,12 +1,15 @@
-// Give the active class to a player when clicked
+// Add a player to the selection when clicked
 const clickListener = () => {
   const players = document.querySelectorAll('.clickable');
+
   const toggleActiveClass = (event) => {
     event.currentTarget.classList.toggle('active');
   };
+
   const toggleActiveOnClick = (player) => {
     player.addEventListener('click', toggleActiveClass);
   };
+
   players.forEach(toggleActiveOnClick);
 }
 

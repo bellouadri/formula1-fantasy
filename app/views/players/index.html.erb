@@ -1,8 +1,17 @@
 <div style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px">
-  <h3>Pilots</h3>
+  <h2>Pilots</h2>
 
-  <h2>Remaining budget :</h2>
+  <h3>Remaining budget :</h3>
   <h3 class='remaining-buget'>200</h3>
+  <h5 class='error-budget'></h5>
+
+  <h3>Players to pick :</h3>
+  <h3 class='remaining-players'>5</h3>
+  <h5 class='error-players'></h5>
+
+  <h3>Constructor to pick :</h3>
+  <h3 class='remaining-constructor'>1</h3>
+  <h5 class='error-constructors'></h5>
 
   <table>
     <% @players.each do |player| %>
@@ -10,7 +19,7 @@
         <td><p><%= player.first_name %></p></td>
         <td><p><%= player.last_name %></p></td>
         <td><p class="price"><%= player.price %></p></td>
-        <td><p><%= player.is_constructor %></p></td>
+        <td><p class="constructor"><%= player.is_constructor %></p></td>
       </tr>
     <% end %>
   </table>
