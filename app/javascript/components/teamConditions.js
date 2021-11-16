@@ -17,7 +17,6 @@ const playersConstraint = () => {
       } else if (players[index].classList.contains('active') && players[index].querySelectorAll('.constructor')[0].innerText == 'false' && remaining_players <= 0) {
         total_player_chosen += 1;
       }
-
       document.querySelector('.remaining-constructor').innerText = remaining_constructors.toString();
       document.querySelector('.remaining-players').innerText = remaining_players.toString();
     }
