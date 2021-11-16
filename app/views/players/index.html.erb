@@ -1,11 +1,15 @@
 <div style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px">
   <h3>Pilots</h3>
+
+  <h2>Remaining budget :</h2>
+  <h3 class='remaining-buget'>200</h3>
+
   <table>
     <% @players.each do |player| %>
       <tr class="clickable">
         <td><p><%= player.first_name %></p></td>
         <td><p><%= player.last_name %></p></td>
-        <td><p><%= player.price %></p></td>
+        <td><p class="price"><%= player.price %></p></td>
         <td><p><%= player.is_constructor %></p></td>
       </tr>
     <% end %>

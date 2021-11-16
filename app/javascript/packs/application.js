@@ -15,9 +15,11 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import { clickListener } from 'components/playerSelection.js';
+import { clickListener, remainingBudget } from 'components/playerSelection.js';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   clickListener();
+  remainingBudget();
+
 });
