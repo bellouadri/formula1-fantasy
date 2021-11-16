@@ -13,8 +13,9 @@ const playersConstraint = () => {
         total_constructor_chosen += 1;
       } else if (players[index].classList.contains('active') && players[index].querySelectorAll('.constructor')[0].innerText == 'false' && remaining_players > 0) {
         remaining_players -= 1;
+        total_player_chosen += 1;
       } else if (players[index].classList.contains('active') && players[index].querySelectorAll('.constructor')[0].innerText == 'false' && remaining_players <= 0) {
-        total_constructor_chosen += 1;
+        total_player_chosen += 1;
       }
 
       document.querySelector('.remaining-constructor').innerText = remaining_constructors.toString();
@@ -23,10 +24,14 @@ const playersConstraint = () => {
 
     if (total_constructor_chosen > 1) {
       document.querySelector('.error-constructors').innerText = "You picked too many constructors.";
+    } else {
+      document.querySelector('.error-constructors').innerText = "";
     }
 
     if (total_player_chosen > 5) {
       document.querySelector('.error-players').innerText = "You picked too many players.";
+    } else {
+      document.querySelector('.error-players').innerText = "";
     }
   }
 
@@ -37,14 +42,9 @@ const playersConstraint = () => {
   players.forEach(updateRemainersOnClick);
 }
 
-// Error messages when budget is exceeded
-const budgetConstraint = () => {
-
-}
-
 // Displaying the save button when the conditions are met
 const displayTeamSave = () => {
 
 }
 
-export { playersConstraint, budgetConstraint, displayTeamSave }
+export { playersConstraint, displayTeamSave }

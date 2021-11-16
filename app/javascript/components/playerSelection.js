@@ -17,10 +17,16 @@ const clickListener = () => {
 const remainingBudget = () => {
   const players = document.querySelectorAll('.clickable');
   const substractValue = (event) => {
-    let remaining_budget = 200;
+    let remaining_budget = 100;
     for (let index = 0; index < players.length; index++) {
       if (players[index].classList.contains('active')) {
         remaining_budget -= parseFloat(players[index].querySelector('.price').innerText);
+        if (remaining_budget < 0) {
+          remaining_budget = 0;
+          document.querySelector('.error-budget').innerText = "You exceeded the allowed budget.";
+        } else {
+          document.querySelector('.error-budget').innerText = "";
+        }
       }
     }
     document.querySelectorAll('.remaining-buget')[0].innerText = remaining_budget.toString();
