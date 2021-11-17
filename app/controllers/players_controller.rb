@@ -6,6 +6,7 @@ class PlayersController < ApplicationController
     update_teams
     update_players
     @players = Player.all
+    FantasyTeam.create(name: 'Your Team')
   end
 
   def new

@@ -1,0 +1,40 @@
+const createTeam = () => {
+
+  // Find all the selected Players
+  const players = document.querySelectorAll('.clickable');
+
+  const createTeamPlayers = () => {
+    for (let index = 0; index < players.length; index++) {
+      if (players[index].classList.contains('active')) {
+        $.ajax({
+          url : "/fantasy_team_players",
+          type : "post",
+          data : {fantasy_team_id: 1, player_id: 6}, // data should be serialized
+        });
+      }
+    }
+  }
+
+// For each selected player create a new FantasyTeamPlayer
+
+// Add an event listener on the save button
+
+  // $.ajax({
+  //   url : "/controller/index",
+  //   type : "post",
+  //   data : {serialized: "data"}, // data should be serialized
+  // });
+
+
+  save_button = document.querySelector('.save-team-button');
+  // save-button.addEventListener('click', createTeamPlayers);
+
+  const createTeamPlayersOnClick = (button) => {
+    save-button.addEventListener('click', createTeamPlayers);
+  };
+
+  save-button.forEach(createTeamPlayersOnClick);
+
+}
+
+export { createTeam }

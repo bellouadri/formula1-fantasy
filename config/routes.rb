@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :teams, only: [:index, :show, :new, :create]
   resources :players, only: [:index, :show, :new, :create]
   resources :fantasy_teams, only: [:index, :show, :new, :create]
+  resources :fantasy_team_players, only: [:index, :show, :new, :create]
 end

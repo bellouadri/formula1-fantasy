@@ -17,10 +17,12 @@ require("channels")
 
 import { clickListener, remainingBudget } from 'components/playerSelection.js';
 import { playersConstraint, displayTeamSave } from 'components/teamConditions.js'
+import { createTeam } from 'components/teamCreation.js.erb'
 
 document.addEventListener('turbolinks:load', () => {
   clickListener();
   remainingBudget();
   playersConstraint();
   displayTeamSave();
+  createTeam();
 });
