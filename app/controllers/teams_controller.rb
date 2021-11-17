@@ -29,14 +29,4 @@ class TeamsController < ApplicationController
   def team_params
     params.require(:team).permit(:name)
   end
-
-  # def call_team_api
-  #   url = 'https://fantasy-stage-api.formula1.com/partner_games/f1/teams'
-  #   teams_serialized = URI.open(url).read
-  #   parsed_teams = JSON.parse(teams_serialized)
-
-  #   parsed_teams['teams'].each do |team|
-  #     Team.create(name: team['name'])
-  #   end
-  # end
 end

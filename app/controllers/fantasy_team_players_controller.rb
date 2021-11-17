@@ -26,5 +26,3 @@ class FantasyTeamPlayersController < ApplicationController
     params.require(:fantasy_team_player).permit(:fantasy_team_id, :player_id)
   end
 end
-
-# FantasyTeamPlayer.create([{ fantasy_team_id: 1, player_id: 6 }, { fantasy_team_id: 2, player_id: 10 }])
