@@ -4,6 +4,75 @@
 
 .active {
   p {
-    color: red;
+    color: rgba(40,120,30,0.9);
+    font-weight: bolder;
   }
+}
+
+.pilot-table {
+  .pilot-card {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  img {
+    width: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  p {
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .constructor {
+    color: white;
+  }
+}
+
+.constructor-table {
+  .constructor-card {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  img {
+    width: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  p {
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .constructor {
+    color: white;
+  }
+}
+
+.container {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.pickup-info {
+  h3 {
+    display: inline;
+    padding-left: 10px;
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: 0px;
 }

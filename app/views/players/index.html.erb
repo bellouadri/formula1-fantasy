@@ -1,28 +1,58 @@
-<div style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px">
-  <h2>Pilots</h2>
+<div class="container">
 
-  <h3>Remaining budget :</h3>
-  <h3 class='remaining-buget'>100</h3>
-  <h5 class='error-budget'></h5>
+  <img style='width: 200px; padding-bottom: 30px' src="data:image/png;base64,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" alt="">
 
-  <h3>Players to pick :</h3>
-  <h3 class='remaining-players'>5</h3>
-  <h5 class='error-players'></h5>
+  <div class='pickup-info'>
+    <h3>💸 Remaining budget :</h3>
+    <h3 class='remaining-buget'>100</h3>
+  </div>
+  <h5 class='error-message error-budget'></h5>
 
-  <h3>Constructor to pick :</h3>
-  <h3 class='remaining-constructor'>1</h3>
-  <h5 class='error-constructors'></h5>
+  <div class="pickup-info">
+    <h3>🧢 Drivers to pick :</h3>
+    <h3 class='remaining-players'>5</h3>
+  </div>
+  <h5 class='error-message error-players'></h5>
+
+  <div class="pickup-info">
+    <h3>🏎 Constructor to pick :</h3>
+    <h3 class='remaining-constructor'>1</h3>
+  </div>
+  <h5 class='error-message error-constructors'></h5>
 
   <p class='save-team-button'>Testing</p>
 
-  <table>
+  <h1>Pilots</h1>
+  <table class='pilot-table'>
     <% @players.each do |player| %>
-      <tr class="clickable">
-        <td><p><%= player.first_name %></p></td>
-        <td><p><%= player.last_name %></p></td>
-        <td><p class="price"><%= player.price %></p></td>
-        <td><p class="constructor"><%= player.is_constructor %></p></td>
-      </tr>
+      <% if (player.is_constructor == false) %>
+        <tr class="clickable pilot-card">
+          <!-- <div class='pilot-card'> -->
+            <td><img src="<%= player.picture %>" alt=""></td>
+            <td><p><%= player.first_name %></p></td>
+            <td><p><%= player.last_name %></p></td>
+            <td><p style="display: inline; padding-right: 5px" class="price"><%= player.price %></p><p style="display: inline; padding-left: 0px">$m</p></td>
+            <td><p class="constructor"><%= player.is_constructor %></p></td>
+          <!-- </div> -->
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+
+  <h1>Constructors</h1>
+  <table class='constructor-table'>
+    <% @players.each do |player| %>
+      <% if (player.is_constructor == true) %>
+        <tr class="clickable constructor-card">
+          <!-- <div class='pilot-card'> -->
+            <td><img src="<%= player.picture %>" alt=""></td>
+            <td><p><%= player.first_name %></p></td>
+            <td><p><%= player.last_name %></p></td>
+            <td><p style="display: inline; padding-right: 5px" class="price"><%= player.price %></p><p style="display: inline; padding-left: 0px">$m</p></td>
+            <td><p class="constructor"><%= player.is_constructor %></p></td>
+          <!-- </div> -->
+        </tr>
+      <% end %>
     <% end %>
   </table>
 </div>

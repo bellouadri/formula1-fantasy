@@ -53,9 +53,9 @@ class PlayersController < ApplicationController
       @player = Player.find_by(first_name: player['first_name'])
       @team = Team.find_by(name: player['team_name'])
       if @player
-        @player.update(first_name: player['first_name'], last_name: player['last_name'], price: player['price'], is_constructor: player['is_constructor'], team_id: @team.id)
+        @player.update(first_name: player['first_name'], last_name: player['last_name'], price: player['price'], is_constructor: player['is_constructor'], picture: player['profile_image']['url'], team_id: @team.id)
       else
-        Player.create(first_name: player['first_name'], last_name: player['last_name'], price: player['price'], is_constructor: player['is_constructor'], team_id: @team.id)
+        Player.create(first_name: player['first_name'], last_name: player['last_name'], price: player['price'], is_constructor: player['is_constructor'], picture: player['profile_image']['url'], team_id: @team.id)
       end
     end
   end
